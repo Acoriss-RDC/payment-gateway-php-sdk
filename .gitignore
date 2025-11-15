@@ -1,0 +1,64 @@
+# OS / Editor / Tooling
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Composer / Dependencies
+vendor/
+composer.lock
+
+# Environment / Secrets
+.env
+.env.*
+!.env.example
+
+# PHPUnit / Test artifacts
+.phpunit.result.cache
+coverage/
+clover.xml
+junit.xml
+
+# Static analysis / tooling caches
+.php-cs-fixer.cache
+.psalm/cache/
+.phpstan/cache/
+.cache/
+
+# Logs / Temp / Dumps
+*.log
+*.tmp
+*.cache
+*.bak
+*.orig
+
+# Build / Distribution
+build/
+dist/
+/tmp/
+
+# Generated autoload (already in vendor but future-proof)
+autoload.php
+
+# Misc
+*.zip
+*.tar
+*.tar.gz
+
+# Xdebug profiler output
+cachegrind.out.*
+
+# Ignore node tooling if ever added
+node_modules/
+
+# Docker / Container local overrides
+.docker/
+
+# Coverage HTML output
+html/coverage/
+
+# Security scan outputs
+security-report.json
+
+# If you decide to keep vendor tracked, remove `vendor/` above.
