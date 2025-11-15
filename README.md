@@ -7,7 +7,7 @@ A PHP SDK for interacting with the Acoriss Payment Gateway API. Mirrors the func
 Require via Composer (after publishing to Packagist or using VCS repo):
 
 ```bash
-composer require acoriss/payment-gateway-php-sdk
+composer require acoriss/payment-gateway
 ```
 
 For local development inside this monorepo:
