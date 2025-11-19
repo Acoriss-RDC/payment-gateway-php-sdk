@@ -7,7 +7,6 @@
 
 # Composer / Dependencies
 vendor/
-composer.lock
 
 # Environment / Secrets
 .env
