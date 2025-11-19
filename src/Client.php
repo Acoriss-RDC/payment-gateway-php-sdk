@@ -89,7 +89,7 @@ class Client
         $this->logger->debug('Creating payment session', ['amount' => $payload['amount'] ?? null]);
 
         try {
-            $response = $this->http->post('sessions', [
+            $response = $this->http->post('/sessions', [
               'body' => $rawBody,
               'headers' => [
                 'X-API-KEY' => $this->apiKey,
