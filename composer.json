@@ -13,6 +13,12 @@
     "phpstan/phpstan": "^1.10",
     "friendsofphp/php-cs-fixer": "^3.64"
   },
+  "config": {
+    "platform": {
+      "php": "8.1.0"
+    },
+    "sort-packages": true
+  },
   "autoload": {
     "psr-4": {
       "Acoriss\\PaymentGateway\\": "src/"
