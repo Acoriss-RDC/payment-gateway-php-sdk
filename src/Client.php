@@ -20,8 +20,8 @@ use Psr\Log\NullLogger;
 class Client
 {
     private const BASE_URLS = [
-      'sandbox' => 'https://sandbox.checkout.rdcard.net/api/v1',
-      'live' => 'https://checkout.rdcard.net/api/v1',
+      'sandbox' => 'https://sandbox.checkout.rdcard.net/api/v1/',
+      'live' => 'https://checkout.rdcard.net/api/v1/',
     ];
 
     private readonly string $apiKey;
@@ -89,7 +89,7 @@ class Client
         $this->logger->debug('Creating payment session', ['amount' => $payload['amount'] ?? null]);
 
         try {
-            $response = $this->http->post('/sessions', [
+            $response = $this->http->post('sessions', [
               'body' => $rawBody,
               'headers' => [
                 'X-API-KEY' => $this->apiKey,
