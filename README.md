@@ -39,7 +39,8 @@ $session = $client->createSession([
         'email' => 'john@example.com',
         'name' => 'John Doe'
     ],
-    'description' => 'Order #1234'
+    'description' => 'Order #1234',
+    'serviceId' => 'service_123' // Optional: specify a service
 ]);
 
 echo $session['checkoutUrl'];

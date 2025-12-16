@@ -39,6 +39,7 @@ final class Types
      *   cancelUrl?:string,
      *   successUrl?:string,
      *   transactionId?:string,
+     *   serviceId?: string,
      *   services?:list<ServiceItem>,
      *   ...
      * }
@@ -51,7 +52,8 @@ final class Types
      *   description?:string,
      *   checkoutUrl:string,
      *   customer:CustomerInfo,
-     *   createdAt:string
+     *   createdAt:string,
+     *   serviceId?: string,
      * }
      *
      * Payment service from API
@@ -78,6 +80,7 @@ final class Types
      *   expired:bool,
      *   services:list<PaymentService>,
      *   status:string
+     *   serviceId?: string,
      * }
      */
 }

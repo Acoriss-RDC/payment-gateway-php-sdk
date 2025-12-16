@@ -138,6 +138,37 @@ class ClientTest extends TestCase
         $this->assertSame('pay_123', $result['id']);
     }
 
+    public function testCreateSessionWithServiceId(): void
+    {
+        $payload = [
+          'amount' => 7500,
+          'currency' => 'USD',
+          'customer' => ['email' => 'test@example.com', 'name' => 'Test User'],
+          'serviceId' => 'service_456',
+        ];
+        $mockResponse = [
+          'id' => 'pay_789',
+          'amount' => 7500,
+          'currency' => 'USD',
+          'checkoutUrl' => 'https://checkout.rdcard.net/sessions/789',
+          'customer' => $payload['customer'],
+          'serviceId' => 'service_456',
+          'createdAt' => '2025-11-15T10:00:00Z',
+        ];
+
+        $responseBody = json_encode($mockResponse);
+        if ($responseBody === false) {
+            $this->fail('Failed to encode response');
+        }
+
+        $client = $this->makeClientWithResponses([
+          new Response(200, [], $responseBody),
+        ]);
+        $result = $client->createSession($payload);
+        $this->assertSame('pay_789', $result['id']);
+        $this->assertSame('service_456', $result['serviceId']);
+    }
+
     public function testCreateSessionWithoutSignatureThrows(): void
     {
         $mockResponse = [

@@ -5,7 +5,7 @@ All notable changes to the Acoriss Payment Gateway PHP SDK will be documented in
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.4] - 2025-12-16
 
 ### Added
 - PSR-3 logging support via optional `logger` configuration parameter
@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive PHPDoc annotations with `@throws` declarations
 - Type hints using `Types::` references for better IDE autocomplete
 - Support for `verify` SSL configuration option in HTTP client
+- Support for `serviceId` parameter in session creation
 - PHPStan static analysis at level 8
 - PHP-CS-Fixer for code style consistency
 - GitHub Actions CI/CD pipeline
@@ -27,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Type safety improvements throughout codebase
 
-## [1.0.0] - 2025-11-19
+## [0.1.1] - 2025-11-19
 
 ### Added
 - Initial release of Acoriss Payment Gateway PHP SDK
